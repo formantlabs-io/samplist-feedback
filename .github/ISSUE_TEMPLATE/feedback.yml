@@ -1,0 +1,57 @@
+name: Feedback
+description: Share an idea, rough edge, confusing workflow, or general reaction to Samplist.
+title: "Feedback: "
+labels: ["feedback", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for trying Samplist. Use this form for anything that would make the product clearer, faster, more useful, or more enjoyable.
+
+  - type: dropdown
+    id: feedback-type
+    attributes:
+      label: What kind of feedback is this?
+      options:
+        - Usability issue
+        - Feature idea
+        - Workflow improvement
+        - Visual/design feedback
+        - General reaction
+      default: 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: feedback
+    attributes:
+      label: What should change?
+      description: Describe the idea, issue, or reaction in your own words.
+      placeholder: "Example: I wanted to compare generated chord options, but I could not tell which one I had already tried."
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: What were you trying to do?
+      description: A little context helps connect the feedback to a real workflow.
+      placeholder: "Example: I was building a four-chord progression and wanted a stronger second chord."
+
+  - type: textarea
+    id: desired-outcome
+    attributes:
+      label: What would a better experience look like?
+      placeholder: "Example: I would like a simple way to save a few generated options before choosing one."
+
+  - type: input
+    id: browser-os
+    attributes:
+      label: Browser and operating system
+      placeholder: "Example: Chrome on macOS, Safari on iPad, Firefox on Windows"
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots, recordings, or extra context
+      description: Drag images, videos, or notes here if they help explain the feedback.
